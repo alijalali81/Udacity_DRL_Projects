@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Jalali_Navigation_Submission</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Navigation</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -12031,6 +12031,43 @@ States have length: 37
 <li>To structure your work, you're welcome to work directly in this Jupyter notebook, or you might like to start over with a new file!  You can see the list of files in the workspace by clicking on <strong><em>Jupyter</em></strong> in the top left corner of the notebook.</li>
 <li>In this coding environment, you will not be able to watch the agent while it is training.  However, <strong><em>after training the agent</em></strong>, you can download the saved model weights to watch the agent on your own machine! </li>
 </ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Math</span><span class="p">,</span> <span class="n">Latex</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="DQN-Algorithm">DQN Algorithm<a class="anchor-link" href="#DQN-Algorithm">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Reinforcement learning is known to be unstable or even to diverge. This
+instability has several causes: the correlations present in the sequence
+of observations, thefact that small updates to $Q$ may significantly change
+the policy and therefore change the data distribution, and the correlations
+between the action-values $(Q)$ and the target value: $r+\gamma_{max} Q(s\prime,a\prime)$.</p>
+<p>Deep Q Network (DQN) developed to address the above mentioned problems in RL. DQN is off-policy reinforcement learning which is a variation of Q-learning algorithm. In DQN deep  neural network is used to approximate the optimal action-value function which is the maximum sum of rewards $r_t$ discounted by $\gamma$ at each timestep $t$, achievable by a behaviour policy $\pi=P(a|s)$, after making an
+observation ($s$) and taking an action ($a$) (see Methods)And it uses replay memory.</p>
+<p><br>Replay memory can break the correlation of samples, because the training data doesn't depend on time.<br>In NN training, DQN uses Mean Squared Error(or Huber loss) for training loss.<br></p>
 
 </div>
 </div>
